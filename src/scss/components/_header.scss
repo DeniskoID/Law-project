@@ -1,0 +1,87 @@
+.header {
+  &__top {
+    background-color: var(--light-gray);
+  }
+
+  &__container-top,
+  &__location,
+  &__communication,
+  &__phone {
+    @include flex-v-center;
+  }
+
+  &__container-top {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+    margin-bottom: 10px;
+  }
+
+  &__location {
+    margin-right: 20px;
+    color: var(--dark-gray-color);
+  }
+  &__location svg {
+    margin-right: rem(8);
+  }
+
+  &__btn {
+    padding: rem(4) rem(10);
+    border: 1px solid var(--dark-gray-color);
+    border-radius: rem(30);
+  }
+
+  &__btn--order {
+    margin-right: auto;
+  }
+
+  // &__communication {
+  // }
+
+  &__phone {
+    margin-right: 16px;
+  }
+
+  &__phone svg {
+    margin-right: 20px;
+  }
+
+  // &__btn--callback {
+  // }
+
+  &__bottom {
+  }
+
+  &__container-bottom,
+  &__nav-list {
+    @include flex-v-center;
+  }
+
+  &__nav {
+    margin-right: 40px;
+  }
+
+  &__nav-list {
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__nav-link {
+  }
+
+  &__btn--login {
+    background-color: var(--pink);
+    border: none;
+  }
+
+  .logo {
+    margin-right: auto;
+    &__link {
+    }
+    &__image {
+    }
+  }
+}
