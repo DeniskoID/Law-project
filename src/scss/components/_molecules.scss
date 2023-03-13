@@ -1,3 +1,21 @@
+.h2-title {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(45);
+  line-height: 130%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: rem(46);
+}
+
+.h3-title {
+  font-size: rem(21);
+  font-weight: 600;
+  line-height: 143%;
+  margin: 0;
+}
+
 .nav__link {
   color: var(--dark-gray-color);
   line-height: 130%;

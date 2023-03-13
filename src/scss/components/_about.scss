@@ -1,0 +1,30 @@
+.about {
+  &__container {
+    padding-top: rem(40);
+    padding-bottom: rem(60);
+  }
+
+  &__title {
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__image-container {
+    flex-basis: calc(100% / 2 - 12px);
+    margin-right: 24px;
+  }
+
+  &__image {
+  }
+
+  &__text-container {
+    flex-basis: calc(100% / 2 - 12px);
+  }
+
+  &__text {
+    @include mb(rem(16));
+    margin: 0;
+  }
+}
