@@ -5,4 +5,8 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/molecules";
 @import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/footer";

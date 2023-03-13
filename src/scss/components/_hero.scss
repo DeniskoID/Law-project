@@ -1,0 +1,90 @@
+.hero {
+  color: var(--dark-blue);
+  background: var(--orange-gradient);
+
+  &__container {
+    @include flex-v-center;
+    padding-top: rem(155);
+    padding-bottom: rem(94);
+  }
+
+  &__content {
+    position: relative;
+    flex-basis: rem(650);
+    margin-right: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 24px;
+      left: -50px;
+      width: rem(35);
+      height: rem(138);
+      background-image: url("../img/arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    font-family: "Bitter", serif;
+    font-size: rem(51);
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: rem(25);
+  }
+
+  &__subtitle {
+    max-width: rem(530);
+    font-size: rem(20);
+    margin-bottom: rem(70);
+  }
+
+  &__buttons-block {
+    @include flex-v-center;
+  }
+
+  &__btn-help {
+    margin-right: 28px;
+  }
+
+  &__btn-question {
+  }
+
+  &__image-container {
+    position: relative;
+    margin-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      bottom: rem(-20);
+      right: rem(37);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #07467e;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      bottom: rem(12);
+      right: rem(-8);
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      background-color: #7e0717;
+    }
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+  }
+}

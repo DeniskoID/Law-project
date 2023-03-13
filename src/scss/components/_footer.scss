@@ -1,0 +1,80 @@
+.footer {
+  background: var(--orange-gradient);
+
+  &__container {
+    @include flex-all-sb;
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 rem(803);
+    margin-left: auto;
+  }
+
+  &__title {
+    display: block;
+    font-size: rem(14);
+    line-height: 130%;
+    font-weight: 600;
+    margin-bottom: rem(16);
+  }
+
+  &__nav {
+  }
+
+  &__sotial {
+  }
+
+  &__pays {
+  }
+}
+
+.logo {
+  &__link {
+  }
+
+  &__image {
+  }
+}
+
+.sotial {
+  &__icons-list {
+    @include flex-v-center;
+  }
+
+  &__icons-item {
+    @include mr(rem(16));
+  }
+
+  &__link {
+  }
+}
+
+.pays {
+  &__icons-list {
+    @include flex-v-center;
+  }
+
+  &__icons-item {
+    @include mr(rem(16));
+  }
+
+  &__image {
+  }
+}
+
+.nav {
+  &__list {
+  }
+
+  &__item {
+    @include mb(rem(16));
+  }
+}

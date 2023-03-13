@@ -1,4 +1,8 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
   &__top {
     background-color: var(--light-gray);
   }
@@ -24,12 +28,6 @@
     margin-right: rem(8);
   }
 
-  &__btn {
-    padding: rem(4) rem(10);
-    border: 1px solid var(--dark-gray-color);
-    border-radius: rem(30);
-  }
-
   &__btn--order {
     margin-right: auto;
   }
@@ -39,10 +37,11 @@
 
   &__phone {
     margin-right: 16px;
+    color: var(--dark-gray-color);
   }
 
   &__phone svg {
-    margin-right: 20px;
+    margin-right: rem(10);
   }
 
   // &__btn--callback {
@@ -57,19 +56,16 @@
   }
 
   &__nav {
+    flex: 0 1 rem(390);
     margin-right: 40px;
   }
 
   &__nav-list {
+    @include flex-all-sb;
   }
 
   &__nav-item {
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-  }
-
-  &__nav-link {
+    @include mr(10px);
   }
 
   &__btn--login {
@@ -77,11 +73,14 @@
     border: none;
   }
 
-  .logo {
+  &__logo {
     margin-right: auto;
-    &__link {
-    }
-    &__image {
-    }
+  }
+}
+.logo {
+  &__link {
+  }
+
+  &__image {
   }
 }
