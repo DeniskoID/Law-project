@@ -13,7 +13,9 @@
 
   &__image-container {
     flex-basis: calc(100% / 2 - 12px);
-    margin-right: 24px;
+    margin-right: rem(24);
+    border-radius: rem(5);
+    overflow: hidden;
   }
 
   &__image {

@@ -3,8 +3,11 @@
     <h2 class="about__title h2-title">О нас</h2>
     <div class="about__content">
       <div class="about__image-container">
-        <img class="about__image" src="img/content_images/about_image.jpg" alt="Мужчины работают за ноутбуками"
-          width="594" height="368">
+        <picture>
+          <source srcset="img/content_images/about_image.webp" type="image/webp">
+          <img loading="lazy" src="img/content_images/about_image.jpg" class="about__image" width="594" height="368"
+            alt="Мужчины работают за ноутбуками">
+        </picture>
       </div>
       <div class="about__text-container">
         <p class="about__text">Каждый член нашей команды — это специалист, имеющий большой опыт применения
