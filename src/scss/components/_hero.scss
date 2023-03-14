@@ -1,6 +1,7 @@
 .hero {
   color: var(--dark-blue);
   background: var(--orange-gradient);
+  margin-top: -76px;
 
   &__container {
     @include flex-v-center;
