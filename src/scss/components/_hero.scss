@@ -1,11 +1,13 @@
 .hero {
+  position: relative;
+  z-index: 10;
   color: var(--dark-blue);
   background: var(--orange-gradient);
   margin-top: -76px;
 
   &__container {
     @include flex-v-center;
-    padding-top: rem(155);
+    padding-top: rem(130);
     padding-bottom: rem(94);
   }
 

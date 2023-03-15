@@ -1,0 +1,97 @@
+.consult {
+  margin-bottom: rem(90);
+
+  &__container {
+  }
+
+  &__item {
+    flex: 0 1 calc(100% / 2 - 12px);
+
+    &--form {
+    }
+
+    &--map {
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: rem(24);
+  }
+
+  &__title {
+  }
+
+  &__form-title {
+    margin-bottom: rem(12);
+  }
+
+  &__form-subtitle {
+    margin-bottom: rem(24);
+  }
+}
+
+.form {
+  &__btn {
+    display: flex;
+    background-color: var(--light-pink);
+    margin-bottom: rem(29);
+  }
+
+  &__input-box {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: rem(24);
+  }
+
+  &__input {
+    min-width: calc(100% / 2 - 12px);
+    padding: rem(20);
+    border: 1px solid;
+    border-color: var(--accent-color);
+    border-radius: rem(100);
+
+    &:focus-visible {
+      outline: none;
+      border-color: #cf6203;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    border-color: var(--accent-color);
+    border-radius: rem(30);
+    margin-bottom: rem(24);
+    padding: 20px;
+    resize: none;
+
+    &:focus-visible {
+      outline: none;
+      border-color: #cf6203;
+    }
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+  display: inline-block;
+  font-size: 11px;
+
+  &__content {
+    padding-left: 20px;
+    cursor: pointer;
+
+    &::before {
+      top: 4px;
+    }
+
+    &::after {
+      top: 4px;
+    }
+  }
+}
+
+.custom-checkbox__field:checked + .custom-checkbox__content::before {
+  border-color: var((--accent-color));
+}

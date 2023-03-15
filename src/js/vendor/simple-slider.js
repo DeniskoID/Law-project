@@ -493,5 +493,4 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: true,
     swipe: true,
   });
-  slider.next();
 });

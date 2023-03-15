@@ -45,10 +45,10 @@
   opacity: 1;
 }
 
-.custom-checkbox__field:focus + .custom-checkbox__content::before {
-  outline: 2px solid #f00;
-  outline-offset: 2px;
-}
+// .custom-checkbox__field:focus + .custom-checkbox__content::before {
+//   outline: 2px solid #f00;
+//   outline-offset: 2px;
+// }
 
 .custom-checkbox__field:disabled + .custom-checkbox__content {
   opacity: 0.4;

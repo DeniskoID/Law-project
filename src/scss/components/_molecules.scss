@@ -17,8 +17,25 @@
 }
 
 .nav__link {
+  position: relative;
   color: var(--dark-gray-color);
   line-height: 130%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 1px;
+    background-color: var(--dark-gray-color);
+    transition: all 0.4s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::before {
+      width: 100%;
+    }
+  }
 }
 
 .main-btn {
@@ -28,6 +45,7 @@
   padding: rem(19) rem(34);
   border: 2px solid transparent;
   border-radius: rem(30);
+  transition: all 0.4s ease;
 
   &--filled {
     background-color: var(--pink);
@@ -36,10 +54,27 @@
   &--stroked {
     border-color: var(--pink);
   }
+
+  @include hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 .seconary-btn {
   padding: rem(4) rem(10);
   border: 1px solid var(--dark-gray-color);
   border-radius: rem(30);
+  transition: all 0.4s ease;
+
+  @include hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }

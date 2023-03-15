@@ -1,0 +1,34 @@
+.emergency {
+  position: fixed;
+  z-index: 30;
+  bottom: 10px;
+  right: 10px;
+  width: 9%;
+  background-color: var(--light-color);
+  border: 3px solid var(--light-pink);
+  border-radius: 50%;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  &__btn {
+    @include absolute-center;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: var(--orange-gradient);
+    box-shadow: 8.16431e-16px 13.3333px 26.6667px rgba(27, 34, 30, 0.758),
+      inset -5.22516e-16px -8.53333px 8.53333px #f57d2f,
+      inset 5.22516e-16px 8.53333px 8.53333px #f8a84f;
+
+    & img {
+      @include absolute-center;
+      display: inline;
+      text-align: center;
+      width: 60%;
+      height: auto;
+    }
+  }
+}
