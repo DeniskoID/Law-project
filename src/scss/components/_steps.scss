@@ -6,7 +6,14 @@
     display: flex;
     justify-content: space-between;
   }
+
   &__image {
+    transition: all 0.4s ease;
+    backface-visibility: none;
+
+    @include hover {
+      transform: scale(1.02);
+    }
   }
   &__image-container {
     border-radius: rem(5);

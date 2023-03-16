@@ -8,6 +8,17 @@
   border: 3px solid var(--light-pink);
   border-radius: 50%;
 
+  &:before {
+    content: "";
+    @include absolute-center;
+    width: 80%;
+    height: 80%;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+
+    animation: pulse 1s ease infinite;
+  }
+
   &:after {
     content: "";
     display: block;
@@ -22,6 +33,7 @@
     box-shadow: 8.16431e-16px 13.3333px 26.6667px rgba(27, 34, 30, 0.758),
       inset -5.22516e-16px -8.53333px 8.53333px #f57d2f,
       inset 5.22516e-16px 8.53333px 8.53333px #f8a84f;
+    transition: all 0.4 ease;
 
     & img {
       @include absolute-center;
@@ -30,5 +42,24 @@
       width: 60%;
       height: auto;
     }
+
+    &:active {
+      width: 68%;
+      height: 68%;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 70%;
+    height: 70%;
+    border-width: 1px;
+  }
+  100% {
+    width: 110%;
+    height: 110%;
+    border-width: 40px;
+    border-color: transparent;
   }
 }
