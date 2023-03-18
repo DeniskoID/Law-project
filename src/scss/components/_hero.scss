@@ -3,8 +3,7 @@
   z-index: 10;
   color: var(--dark-blue);
   background: var(--orange-gradient);
-  margin-top: -76px;
-
+  margin-top: calc(var(--header-top-height) - 1px);
   &__container {
     @include flex-v-center;
     padding-top: rem(90);
@@ -50,9 +49,6 @@
 
   &__btn-help {
     margin-right: 28px;
-  }
-
-  &__btn-question {
   }
 
   &__image-container {

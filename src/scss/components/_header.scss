@@ -1,14 +1,21 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 20;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // z-index: 10;
-  // min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
   &__top {
     background-color: var(--light-gray);
   }
+
+  // &--fixed {
+  //   position: fixed;
+  //   z-index: 30;
+  //   width: 100%;
+  //   top: 0;
+  //   left: 0;
+  // }
 
   &__container-top,
   &__location,
@@ -18,13 +25,12 @@
   }
 
   &__container-top {
-    padding-top: rem(16);
-    padding-bottom: rem(16);
-    margin-bottom: 10px;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
   }
 
   &__location {
-    margin-right: 20px;
+    margin-right: auto;
     color: var(--dark-gray-color);
   }
   &__location svg {
@@ -35,9 +41,6 @@
     margin-right: auto;
   }
 
-  // &__communication {
-  // }
-
   &__phone {
     margin-right: 16px;
     color: var(--dark-gray-color);
@@ -47,15 +50,17 @@
     margin-right: rem(10);
   }
 
-  // &__btn--callback {
-  // }
-
   &__bottom {
   }
 
   &__container-bottom,
   &__nav-list {
     @include flex-v-center;
+  }
+
+  &__container-bottom {
+    padding-top: rem(12);
+    padding-bottom: rem(12);
   }
 
   &__nav {
@@ -77,6 +82,7 @@
   }
 
   &__logo {
+    max-width: rem(55);
     margin-right: auto;
     transition: all 0.4s ease;
 
@@ -90,5 +96,32 @@
   }
 
   &__image {
+  }
+}
+
+.header--fill .header__bottom {
+  animation: fill-bg 0.6s ease 0s 1 normal forwards;
+}
+
+.header--no-fill .header__bottom {
+  animation: no-fill-bg 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes fill-bg {
+  0% {
+    background-color: none;
+  }
+
+  100% {
+    background-color: #f57428;
+  }
+}
+@keyframes no-fill-bg {
+  0% {
+    background-color: var(--accent-color);
+  }
+
+  100% {
+    background-color: none;
   }
 }

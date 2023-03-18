@@ -1,6 +1,17 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
+// Фиксируем header после скрола на определённую величину
+import { fixHeader } from "./functions/fix-header";
+
+console.log(fixHeader());
+
+// Реализация модальных окон
+import { modals } from "./functions/modals";
+console.log(fixHeader());
+
+modals();
+
 // Определение операционной системы на мобильных
 // import { mobileCheck } from "./functions/mobile-check";
 // console.log(mobileCheck());
@@ -30,15 +41,17 @@
 // import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
-import GraphModal from "graph-modal";
-const modal = new GraphModal();
+// import GraphModal from "graph-modal";
+// const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
 // const tabs = new GraphTabs('tab');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
+import { getHeaderHeight } from "./functions/header-height";
+
+getHeaderHeight();
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';
@@ -58,6 +71,7 @@ const modal = new GraphModal();
 
 // Подключение анимаций по скроллу
 import AOS from "aos";
+
 AOS.init();
 
 // Подключение параллакса блоков при скролле

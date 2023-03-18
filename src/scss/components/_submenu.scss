@@ -3,9 +3,6 @@
   &__container {
   }
 
-  &__nav {
-  }
-
   &__items {
     display: flex;
     position: relative;
@@ -30,29 +27,33 @@
   &__item-1 {
     z-index: 5;
   }
+
   &__item-2 {
     left: 192px;
     z-index: 4;
   }
+
   &__item-3 {
     left: 388px;
     z-index: 3;
   }
+
   &__item-4 {
     left: 584px;
     z-index: 2;
   }
+
   &__item-5 {
     left: 780px;
     z-index: 1;
   }
+
   &__item-6 {
-    // z-index: 7;
     left: 976px;
   }
 
   &__item-active {
-    height: 80px;
+    height: 70px;
     background-color: #f57529;
 
     & a {
@@ -71,4 +72,12 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+.header--fixed .submenu {
+  position: fixed;
+  left: 0;
+  top: var(--header-height);
+  width: 100%;
+  z-index: 19;
 }
