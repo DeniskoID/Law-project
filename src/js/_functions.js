@@ -90,11 +90,17 @@ AOS.init();
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
-
+import { validateForms } from "./functions/validate-forms";
+// const rules1 = [
+//   [
+//     "#email",
+//     [
+//       { rule: "required", errorMessage: "Обязательное поле" },
+//       { rule: "email", errorMessage: "Неправильный email" },
+//     ],
+//   ],
+// ];
 // const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
+//   console.log("Произошла отправка, тут можно писать любые действия");
 // };
-
-// validateForms('.form-1', rules1, afterForm);
+// validateForms(".form-1", rules1, afterForm);

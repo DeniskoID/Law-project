@@ -3,13 +3,18 @@
     <div class="popup-consult__content">
       <button type="button" class="popup-consult__close"><strong>&times;</strong></button>
       <div class="popup-consult__form">
-        <form class="form-consult" action="#">
+        <form class="form-1 form-consult" action="#">
           <h2 class="form-consult__title">Запишитесь сегодня на <br><span class="form-consult__subtitle">бесплатную
               консультацию</span></h2>
-          <input class="form-consult__control form-consult__input" name="user_name" required type="text"
-            placeholder="Введите ваше имя">
-          <input class="form-consult__control form-consult__input" name="user_phone" required type="text"
-            placeholder="Введите телефон">
+          <label for="email">
+            <input id="email" class="form-consult__control form-consult__input" name="user_name"
+              data-inputmask="'mask': '99-9999999'" type="email" placeholder="Введите email" autocomplete="off">
+          </label>
+          <label for="tel">
+            <input id="tel" class="form-consult__control form-consult__input" name="user_phone" type="tel"
+              placeholder="Введите телефон" autocomplete="off">
+          </label>
+
           <button class="form-consult__btn main-btn btn-reset" name="submit" type="submit">Записаться</button>
           <p class="form-consult__notice">Ваши данные конфиденциальны</p>
         </form>
@@ -17,3 +22,28 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="popup-consult" data-modal>
+  <div class="popup-consult__dialog">
+    <div class="popup-consult__content">
+      <button type="button" class="popup-consult__close"><strong>&times;</strong></button>
+      <div class="popup-consult__form">
+        <form class="form-1 form-consult" action="#">
+          <h2 class="form-consult__title">Запишитесь сегодня на <br><span class="form-consult__subtitle">бесплатную
+              консультацию</span></h2>
+          <label for="email">
+            <input id="email" class="form-consult__control form-consult__input" name="user_name"
+              data-inputmask="'mask': '99-9999999'" type="email" placeholder="Введите email" autocomplete="off">
+          </label>
+          <label for="tel">
+            <input id="tel" class="form-consult__control form-consult__input" name="user_phone" type="tel"
+              placeholder="Введите телефон" autocomplete="off">
+          </label>
+
+          <button class="form-consult__btn main-btn btn-reset" name="submit" type="submit">Записаться</button>
+          <p class="form-consult__notice">Ваши данные конфиденциальны</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->

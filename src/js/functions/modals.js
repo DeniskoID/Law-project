@@ -10,7 +10,17 @@ export const modals = () => {
     const close = document.querySelector(closeSelector);
     const windows = document.querySelectorAll("[data-modal]");
 
+    const header = document.querySelector(".header");
     const scroll = calcScroll();
+
+    const inputs = document.querySelectorAll(`${modalSelector} input`);
+
+    // Очищаем форму после закрытия
+    const clearInputs = () => {
+      inputs.forEach((item) => {
+        item.value = "";
+      });
+    };
 
     trigger.forEach((item) => {
       item.addEventListener("click", (e) => {
@@ -22,9 +32,13 @@ export const modals = () => {
           item.style.display = "none";
         });
 
-        modal.style.display = "block";
+        modal.style.display = "flex";
         document.body.style.overflow = "hidden";
+
+        // Фикс смещение окна при overflow hidden
         document.body.style.marginRight = `${scroll}px`;
+        header.style.paddingRight = `${scroll}px`;
+
         // document.body.classList.add('modal-open');
       });
     });
@@ -35,8 +49,13 @@ export const modals = () => {
       });
       modal.style.display = "none";
       document.body.style.overflow = "";
+
+      // Фикс смещение окна при overflow hidden
       document.body.style.marginRight = `0px`;
+      header.style.paddingRight = `0px`;
       // document.body.classList.remove('modal-open');
+
+      clearInputs();
     });
 
     modal.addEventListener("click", (e) => {
@@ -46,8 +65,13 @@ export const modals = () => {
         });
         modal.style.display = "none";
         document.body.style.overflow = "";
+
+        // Фикс смещение окна при overflow hidden
         document.body.style.marginRight = `0px`;
+        header.style.paddingRight = `0px`;
         // document.body.classList.remove('modal-open');
+
+        clearInputs();
       }
     });
   }
