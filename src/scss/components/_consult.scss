@@ -7,9 +7,6 @@
   &__item {
     flex: 1 1 calc(100% / 2 - 12px);
 
-    &--form {
-    }
-
     &--map {
       position: relative;
 
@@ -67,11 +64,15 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
-    margin-bottom: rem(24);
+    margin-bottom: rem(10);
+
+    & > label {
+      min-width: calc(100% / 2 - 12px);
+    }
   }
 
   &__input {
-    min-width: calc(100% / 2 - 12px);
+    width: 100%;
     padding: rem(20);
     border: 1px solid;
     border-color: var(--accent-color);
@@ -81,6 +82,12 @@
       outline: none;
       border-color: #cf6203;
     }
+  }
+
+  & label .just-validate-error-label {
+    margin-bottom: rem(0);
+    margin-top: rem(0);
+    font-size: rem(12);
   }
 
   &__textarea {

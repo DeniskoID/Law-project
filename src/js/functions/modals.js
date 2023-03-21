@@ -29,7 +29,7 @@ export const modals = () => {
         }
 
         windows.forEach((item) => {
-          item.style.display = "none";
+          item.style.display = "hidden";
         });
 
         modal.style.display = "flex";
@@ -54,8 +54,6 @@ export const modals = () => {
       document.body.style.marginRight = `0px`;
       header.style.paddingRight = `0px`;
       // document.body.classList.remove('modal-open');
-
-      clearInputs();
     });
 
     modal.addEventListener("click", (e) => {
@@ -101,6 +99,8 @@ export const modals = () => {
   }
   // ==========================
 
-  bindModal(".popup-consult-btn", ".popup-consult", ".popup-consult__close");
-  // bindModal(".phone_link", ".popup", ".popup .popup_close");
+  bindModal(".callback-btn", ".popup-consult", ".popup__close");
+  bindModal(".hero__btn-help", ".popup-help", ".popup-help-close");
+  bindModal(".hero__btn-question", ".popup-free", ".popup-free-close");
+  bindModal(".emergency", ".popup-emergency", ".popup-emergency .popup__close");
 };

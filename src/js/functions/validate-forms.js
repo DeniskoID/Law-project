@@ -1,13 +1,14 @@
 import JustValidate from "just-validate";
 import Inputmask from "inputmask";
 
-const validateForms = (selector, rules, afterSend) => {
+export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
   const emailSelector = form?.querySelector('input[type="email"]');
-  console.log(emailSelector);
 
-  Inputmask("email").mask(emailSelector);
+  if (emailSelector) {
+    Inputmask("email").mask(emailSelector);
+  }
 
   if (!form) {
     console.error("Нет такого селектора!");
@@ -24,8 +25,7 @@ const validateForms = (selector, rules, afterSend) => {
     inputMask.mask(telSelector);
 
     rules.forEach((item) => {
-      if (item[0] == "#tel") {
-        console.log("Okkkkkkkkkk");
+      if (item[0] == ".phone") {
         item[1].push({
           rule: "function",
           validator: function () {
@@ -41,7 +41,7 @@ const validateForms = (selector, rules, afterSend) => {
   const validation = new JustValidate(selector);
 
   for (let item of rules) {
-    for (let i = 0; i < item.length; i++) {
+    for (let i = 0; i <= item.length; i++) {
       validation.addField(item[0], item[1]);
     }
   }
@@ -68,20 +68,3 @@ const validateForms = (selector, rules, afterSend) => {
   //   ev.target.reset();
   // })
 };
-
-const afterForm = () => {
-  console.log("Произошла отправка, тут можно писать любые действия");
-};
-
-const rules1 = [
-  [
-    "#email",
-    [
-      { rule: "required", errorMessage: "Обязательное поле" },
-      { rule: "email", errorMessage: "Некорректный email" },
-    ],
-  ],
-  ["#tel", [{ rule: "required", errorMessage: "Обязательное поле" }]],
-];
-console.log(rules1[1]);
-validateForms(".form-1", rules1, afterForm);

@@ -4,11 +4,10 @@
 // Фиксируем header после скрола на определённую величину
 import { fixHeader } from "./functions/fix-header";
 
-console.log(fixHeader());
+fixHeader();
 
 // Реализация модальных окон
 import { modals } from "./functions/modals";
-console.log(fixHeader());
 
 modals();
 
@@ -39,10 +38,6 @@ modals();
 
 // Реализация включения скролла (не забудьте вызвать функцию)
 // import { enableScroll } from './functions/enable-scroll';
-
-// Реализация модального окна
-// import GraphModal from "graph-modal";
-// const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -91,16 +86,32 @@ AOS.init();
 // });
 
 import { validateForms } from "./functions/validate-forms";
-// const rules1 = [
-//   [
-//     "#email",
-//     [
-//       { rule: "required", errorMessage: "Обязательное поле" },
-//       { rule: "email", errorMessage: "Неправильный email" },
-//     ],
-//   ],
-// ];
-// const afterForm = () => {
-//   console.log("Произошла отправка, тут можно писать любые действия");
-// };
-// validateForms(".form-1", rules1, afterForm);
+const afterForm = () => {
+  console.log("Произошла отправка, тут можно писать любые действия");
+};
+
+const rules1 = [
+  [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [".phone", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+];
+const rules2 = [
+  [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [".phone", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+];
+const rules3 = [
+  [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [
+    ".email",
+    [
+      { rule: "required", errorMessage: "Обязательное поле" },
+      { rule: "email", errorMessage: "Некорректный email" },
+    ],
+  ],
+  [".phone", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+];
+
+validateForms(".form-1", rules1, afterForm);
+validateForms(".form-2", rules2, afterForm);
+validateForms(".form-3", rules3, afterForm);
+validateForms(".form-4", rules3, afterForm);
+validateForms(".form-1-2", rules1, afterForm);

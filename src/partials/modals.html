@@ -1,21 +1,51 @@
 <div class="popup-consult" data-modal>
   <div class="popup-consult__dialog">
     <div class="popup-consult__content">
-      <button type="button" class="popup-consult__close"><strong>&times;</strong></button>
+      <button type="button" class="popup__close"><strong>&times;</strong></button>
       <div class="popup-consult__form">
-        <form class="form-1 form-consult" action="#">
-          <h2 class="form-consult__title">Запишитесь сегодня на <br><span class="form-consult__subtitle">бесплатную
-              консультацию</span></h2>
-          <label for="email">
-            <input id="email" class="form-consult__control form-consult__input" name="user_name"
-              data-inputmask="'mask': '99-9999999'" type="email" placeholder="Введите email" autocomplete="off">
-          </label>
-          <label for="tel">
-            <input id="tel" class="form-consult__control form-consult__input" name="user_phone" type="tel"
-              placeholder="Введите телефон" autocomplete="off">
+        <h2 class="form-title popup-form__title">Оставьте свой номер<br><span class="form-subtitle">мы вам
+            перезвоним</span></h2>
+
+        <form class="form-1 popup-form form-consult" action="#">
+          <label for="callback-name">
+            <input id="callback-name" class="popup-form__control popup-form__input name" name="user_name" type="text"
+              placeholder="Имя" autocomplete="off">
           </label>
 
-          <button class="form-consult__btn main-btn btn-reset" name="submit" type="submit">Записаться</button>
+
+          <label for="tel">
+            <input id="tel" class="popup-form__control phone popup-form__input" name="user_phone" type="tel"
+              placeholder="Контактный телефон" autocomplete="off">
+          </label>
+
+          <button class="popup-form__btn main-btn btn-reset" name="submit" type="submit">Отправить</button>
+          <p class="form-consult__notice">Ваши данные конфиденциальны</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-emergency" data-modal>
+  <div class="popup-emergency__dialog">
+    <div class="popup-emergency__content">
+      <button type="button" class="popup__close"><strong>&times;</strong></button>
+      <div class="popup-emergency__form">
+        <h2 class="form-title popup-form__title">Оставьте свой номер<br><span class="form-subtitle">мы вам
+            перезвоним</span></h2>
+
+        <form class="form-1-2 popup-form form-consult" action="#">
+          <label for="callback-name1">
+            <input id="callback-name1" class="popup-form__control popup-form__input name" name="user_name" type="text"
+              placeholder="Имя" autocomplete="off">
+          </label>
+
+
+          <label for="tel">
+            <input id="tel" class="popup-form__control phone popup-form__input" name="user_phone" type="tel"
+              placeholder="Контактный телефон" autocomplete="off">
+          </label>
+
+          <button class="popup-form__btn main-btn btn-reset" name="submit" type="submit">Отправить</button>
           <p class="form-consult__notice">Ваши данные конфиденциальны</p>
         </form>
       </div>
@@ -23,27 +53,194 @@
   </div>
 </div>
 
-<!-- <div class="popup-consult" data-modal>
-  <div class="popup-consult__dialog">
-    <div class="popup-consult__content">
-      <button type="button" class="popup-consult__close"><strong>&times;</strong></button>
-      <div class="popup-consult__form">
-        <form class="form-1 form-consult" action="#">
-          <h2 class="form-consult__title">Запишитесь сегодня на <br><span class="form-consult__subtitle">бесплатную
-              консультацию</span></h2>
-          <label for="email">
-            <input id="email" class="form-consult__control form-consult__input" name="user_name"
-              data-inputmask="'mask': '99-9999999'" type="email" placeholder="Введите email" autocomplete="off">
-          </label>
-          <label for="tel">
-            <input id="tel" class="form-consult__control form-consult__input" name="user_phone" type="tel"
-              placeholder="Введите телефон" autocomplete="off">
-          </label>
 
-          <button class="form-consult__btn main-btn btn-reset" name="submit" type="submit">Записаться</button>
-          <p class="form-consult__notice">Ваши данные конфиденциальны</p>
-        </form>
-      </div>
+<div class="popup popup-free popup-big" data-modal>
+  <div class="popup-big__content">
+    <button type="button" class="popup-free-close popup__close"><strong>&times;</strong></button>
+    <h2 class="form-title popup-form__title">Получить бесплатную консультация</h2>
+    <div class="popup-big__form">
+      <form class="form-3 popup-form form-big" autocomplete="off" novalidate="novalidate">
+        <div class="control-wrapper">
+          <label class="input-label" for="popup-big__name">
+            <input id="popup-big__name" class="popup-form__control popup-form__input name" autocomplete="off"
+              type="text" placeholder="Ваше имя" name="Имя" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="popup-big__phone">
+            <input id="popup-big__phone" class="popup-form__control popup-form__input phone" autocomplete="off"
+              type="tel" placeholder="Ваш телефон" name="Телефон" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="popup-big__email">
+            <input id="popup-big__email" class="popup-form__input popup-form__control email" autocomplete="off"
+              type="email" placeholder="Ваша почта" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="city-select">
+            <select class="select popup-form__control popup-form__input" id="city-select">
+              <option value="">Регион проживания</option>
+              <option value="Москва">Москва</option>
+              <option value="Севастополь">Севастополь</option>
+              <option value="Ростов">Ростов</option>
+              <option value="Краснодар">Краснодар</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="law-select">
+            <select class="select popup-form__control popup-form__input" id="law-select">
+              <option value="">Область права</option>
+              <option value="Гражданские дела">Гражданские дела</option>
+              <option value="Уголовное право">Уголовное право</option>
+              <option value="Корпоративное право">Корпоративное право</option>
+              <option value="Авторское право и IT">Авторское право и IT</option>
+              <option value="Медицинское право">Медицинское право</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="service-select">
+            <select class="select popup-form__control popup-form__input" id="service-select">
+              <option value="">Услуга</option>
+              <option value="Гражданские дела">Подай</option>
+              <option value="Уголовное право">Принеси</option>
+              <option value="Корпоративное право">Помоги</option>
+              <option value="Авторское право и IT">На халяву</option>
+              <option value="Медицинское право">Уйди</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="lawyer-select">
+            <select class="select popup-form__control popup-form__input" id="lawyer-select">
+              <option value="">Юрист</option>
+              <option value="Гражданские дела">Иванов</option>
+              <option value="Уголовное право">Петров</option>
+              <option value="Корпоративное право">Сидоров</option>
+              <option value="Авторское право и IT">Васильева</option>
+              <option value="Медицинское право">Кукушкина</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="date-select">
+            <input class="popup-form__control popup-form__input" type="date" id="date-select" name="date" value=""
+              min="2023-21-03" max="2023-05-01">
+          </label>
+        </div>
+
+        <textarea class="popup-form__control popup-form__input" name="Заявка" id="" cols="30" rows="10"
+          placeholder="краткое содержание заявки"></textarea>
+        <div class="control-wrapper">
+          <button type="submit" class="popup-form__btn main-btn btn-reset">Отправить</button>
+        </div>
+      </form>
     </div>
+
   </div>
-</div> -->
+</div>
+<div class="popup popup-help popup-big" data-modal>
+  <div class="popup-big__content">
+    <button type="button" class="popup-help-close popup__close"><strong>&times;</strong></button>
+    <h2 class="form-title popup-form__title">Получить помощь</h2>
+    <div class="popup-big__form">
+      <form class="form-4 popup-form form-big" autocomplete="off" novalidate="novalidate">
+        <div class="control-wrapper">
+          <label class="input-label" for="popup-big__name">
+            <input id="popup-big__name" class="popup-form__control popup-form__input name" autocomplete="off"
+              type="text" placeholder="Ваше имя" name="Имя" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="popup-big__phone">
+            <input id="popup-big__phone" class="popup-form__control popup-form__input phone" autocomplete="off"
+              type="tel" placeholder="Ваш телефон" name="Телефон" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="popup-big__email">
+            <input id="popup-big__email" class="popup-form__input popup-form__control email" autocomplete="off"
+              type="email" placeholder="Ваша почта" />
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="city-select">
+            <select class="select popup-form__control popup-form__input" id="city-select">
+              <option value="">Регион проживания</option>
+              <option value="Москва">Москва</option>
+              <option value="Севастополь">Севастополь</option>
+              <option value="Ростов">Ростов</option>
+              <option value="Краснодар">Краснодар</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="law-select">
+            <select class="select popup-form__control popup-form__input" id="law-select">
+              <option value="">Область права</option>
+              <option value="Гражданские дела">Гражданские дела</option>
+              <option value="Уголовное право">Уголовное право</option>
+              <option value="Корпоративное право">Корпоративное право</option>
+              <option value="Авторское право и IT">Авторское право и IT</option>
+              <option value="Медицинское право">Медицинское право</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="service-select">
+            <select class="select popup-form__control popup-form__input" id="service-select">
+              <option value="">Услуга</option>
+              <option value="Гражданские дела">Подай</option>
+              <option value="Уголовное право">Принеси</option>
+              <option value="Корпоративное право">Помоги</option>
+              <option value="Авторское право и IT">На халяву</option>
+              <option value="Медицинское право">Уйди</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="lawyer-select">
+            <select class="select popup-form__control popup-form__input" id="lawyer-select">
+              <option value="">Юрист</option>
+              <option value="Гражданские дела">Иванов</option>
+              <option value="Уголовное право">Петров</option>
+              <option value="Корпоративное право">Сидоров</option>
+              <option value="Авторское право и IT">Васильева</option>
+              <option value="Медицинское право">Кукушкина</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-wrapper">
+          <label for="date-select">
+            <input class="popup-form__control popup-form__input" type="date" id="date-select" name="date" value=""
+              min="2023-21-03" max="2023-05-01">
+          </label>
+        </div>
+
+        <textarea class="popup-form__control popup-form__input" name="Заявка" id="" cols="30" rows="10"
+          placeholder="краткое содержание заявки"></textarea>
+        <div class="control-wrapper">
+          <button type="submit" class="popup-form__btn main-btn btn-reset">Отправить</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
