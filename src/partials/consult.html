@@ -15,21 +15,20 @@
           Опишите свою ситуацию и мы перезвоним вам в кратчайшие сроки
         </div>
         <form action="#" class="form form-2">
-
-          <div class="form__input-box">
-            <label for="consult-name">
-              <input id="consult-name" type="text" name="Имя" class="form__input name" placeholder="Имя" required>
-            </label>
-            <label for="consult-phone">
-              <input id="consult-phone" type="tel" name="Телефон" class="form__input phone" placeholder="Tелефон"
-                required>
-            </label>
-
+          <div class="form__fields-wrapper">
+            <div class="form__inputs-box">
+              <label for="consult-name">
+                <input id="consult-name" type="text" name="Имя" class="form__input name" placeholder="Имя" required>
+              </label>
+              <label for="consult-phone">
+                <input id="consult-phone" type="tel" name="Телефон" class="form__input phone" placeholder="Tелефон"
+                  required>
+              </label>
+            </div>
+            <textarea name="Вопрос" class="form__textarea" cols="30" rows="5"
+              placeholder="Коротко опишите проблемму"></textarea>
           </div>
-          <textarea name="Вопрос" class="form__textarea" cols="30" rows="10"></textarea>
-
           <button type="submit" href="/" class="btn-reset form__btn main-btn">Оставить заявку</button>
-
           <label class="custom-checkbox">
             <input type="checkbox" class="custom-checkbox__field" required>
             <span class="custom-checkbox__content"></span>

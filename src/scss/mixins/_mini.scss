@@ -8,10 +8,6 @@
 
 $browser-context: 1rem; // Default
 
-// @function rem($pixels, $context: $browser-context) {
-//   @return #{$pixels/$context}rem;
-// }
-
 @function rem($px) {
   @return math.div($px, 16) + rem;
 }

@@ -22,10 +22,19 @@ modals();
 // }
 
 // Троттлинг функции (для ресайза, ввода в инпут, скролла и т.д.)
-// import { throttle } from './functions/throttle';
-// let yourFunc = () => { console.log('throttle') };
-// let func = throttle(yourFunc);
-// window.addEventListener('resize', func);
+import { throttle } from "./functions/throttle";
+let getHeight = () => {
+  getHeaderHeight();
+};
+let fixHead = () => {
+  fixHeader();
+};
+let func1 = throttle(getHeight);
+let func2 = throttle(fixHead);
+// window.addEventListener("resize", func);
+
+window.addEventListener("resize", func1);
+window.addEventListener("resize", func2);
 
 // Фикс фулскрин-блоков
 // import './functions/fix-fullheight';

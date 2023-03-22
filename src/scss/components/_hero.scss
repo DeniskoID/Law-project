@@ -4,10 +4,21 @@
   color: var(--dark-blue);
   background: var(--orange-gradient);
   margin-top: calc(var(--header-top-height) - 1px);
+
   &__container {
     @include flex-v-center;
     padding-top: rem(90);
     padding-bottom: rem(94);
+
+    @include tablet {
+      justify-content: center;
+      padding-top: rem(50);
+      padding-bottom: rem(60);
+    }
+
+    @include small-tablet {
+      padding-top: rem(80);
+    }
   }
 
   &__content {
@@ -27,6 +38,11 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    @include tablet {
+      flex-basis: unset;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -35,20 +51,62 @@
     font-weight: 700;
     line-height: 130%;
     margin-bottom: rem(25);
+
+    @include tablet {
+      line-height: 120%;
+      margin-bottom: rem(20);
+    }
+
+    @include small-tablet {
+      line-height: 120%;
+      font-size: rem(40);
+      margin-bottom: rem(15);
+    }
+
+    @include mobile {
+      font-size: rem(35);
+    }
   }
 
   &__subtitle {
     max-width: rem(530);
     font-size: rem(20);
     margin-bottom: rem(60);
+    @include tablet {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: rem(35);
+    }
+
+    @include small-tablet {
+      line-height: 130%;
+      font-size: rem(18);
+      margin-bottom: rem(25);
+    }
   }
 
   &__buttons-block {
     @include flex-v-center;
+    @include tablet {
+      justify-content: center;
+    }
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      flex-basis: rem(278);
+    }
   }
 
   &__btn-help {
     margin-right: 28px;
+    @include small-tablet {
+      margin-right: rem(15);
+    }
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: rem(12);
+    }
   }
 
   &__image-container {
@@ -58,7 +116,6 @@
     &::before {
       content: "";
       position: absolute;
-
       bottom: rem(-20);
       right: rem(37);
       width: 100%;
@@ -70,13 +127,16 @@
     &::after {
       content: "";
       position: absolute;
-
       bottom: rem(12);
       right: rem(-8);
       width: 50%;
       height: 50%;
       border-radius: 50%;
       background-color: #7e0717;
+    }
+
+    @include tablet {
+      display: none;
     }
   }
 
@@ -85,5 +145,11 @@
     position: relative;
     z-index: 2;
     border-radius: 50%;
+  }
+}
+
+.header--fixed .hero {
+  @include small-tablet {
+    margin-bottom: 0 !important;
   }
 }

@@ -1,21 +1,16 @@
 .header {
   position: fixed;
-  z-index: 20;
+  z-index: 40;
   position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
   &__top {
     background-color: var(--light-gray);
+    @include small-tablet {
+      display: none;
+    }
   }
-
-  // &--fixed {
-  //   position: fixed;
-  //   z-index: 30;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-  // }
 
   &__container-top,
   &__location,
@@ -51,6 +46,9 @@
   }
 
   &__bottom {
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__container-bottom,
@@ -89,13 +87,6 @@
     @include hover {
       transform: scale(1.03);
     }
-  }
-}
-.logo {
-  &__link {
-  }
-
-  &__image {
   }
 }
 

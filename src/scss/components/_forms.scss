@@ -4,6 +4,10 @@
   border-radius: rem(14);
   background-color: var(--light-color);
 
+  @include mobile {
+    padding-top: rem(15);
+  }
+
   &__btn {
     background-color: var(--accent-color);
     width: 100%;
@@ -59,6 +63,11 @@
   color: var(--dark-gray-color);
   line-height: 1.5;
   margin-top: 0;
+
+  @include small-tablet {
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
 }
 
 .form-subtitle {

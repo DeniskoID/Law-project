@@ -9,6 +9,11 @@
 
   &__content {
     display: flex;
+    align-items: flex-start;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__image-container {
@@ -16,12 +21,24 @@
     margin-right: rem(24);
     border-radius: rem(5);
     overflow: hidden;
+    position: sticky;
+    top: calc(var(--header-height) + var(--submenu-height) + 10px);
+
+    @include small-tablet {
+      position: static;
+      top: 0;
+      flex-basis: unset;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(20);
+      justify-content: center;
+    }
   }
 
   &__image {
     transition: all 0.4s ease;
-    backface-visibility: none;
-
+    width: 100%;
     @include hover {
       transform: scale(1.02);
     }
