@@ -56,11 +56,9 @@ export const fixHeader = () => {
   const documentWidth = document.documentElement.clientWidth;
 
   if (documentWidth <= 768) {
-    console.log("<=768");
     container.classList.remove("header--fixed");
     window.removeEventListener("scroll", scrollFix);
   } else {
-    console.log("++++");
     window.addEventListener("scroll", scrollFix);
   }
 

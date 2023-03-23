@@ -14,7 +14,7 @@
 
 
           <label for="tel">
-            <input id="tel" class="popup-form__control phone popup-form__input" name="user_phone" type="tel"
+            <input id="tel" class="popup-form__control phone-1 popup-form__input" name="user_phone" type="tel"
               placeholder="Контактный телефон" autocomplete="off">
           </label>
 
@@ -26,40 +26,37 @@
   </div>
 </div>
 <div class="popup-emergency" data-modal>
-  <div class="popup-emergency__dialog">
-    <div class="popup-emergency__content">
-      <button type="button" class="popup__close"><strong>&times;</strong></button>
-      <div class="popup-emergency__form">
-        <h2 class="form-title popup-form__title">Оставьте свой номер<br><span class="form-subtitle">мы вам
-            перезвоним</span></h2>
+  <div class="popup-emergency__content">
+    <button type="button" class="popup__close"><strong>&times;</strong></button>
+    <div class="popup-emergency__form">
+      <h2 class="form-title popup-form__title">Оставьте свой номер<br><span class="form-subtitle">мы вам
+          перезвоним</span></h2>
 
-        <form class="form-1-2 popup-form form-consult" action="#">
-          <label for="callback-name1">
-            <input id="callback-name1" class="popup-form__control popup-form__input name" name="user_name" type="text"
-              placeholder="Имя" autocomplete="off">
-          </label>
+      <form class="form-1-2 popup-form form-consult" action="#">
+        <label for="callback-name1">
+          <input id="callback-name1" class="popup-form__control popup-form__input name" name="user_name" type="text"
+            placeholder="Имя">
+        </label>
 
 
-          <label for="tel">
-            <input id="tel" class="popup-form__control phone popup-form__input" name="user_phone" type="tel"
-              placeholder="Контактный телефон" autocomplete="off">
-          </label>
+        <label for="tel">
+          <input id="tel" class="popup-form__control phone-1 popup-form__input" name="user_phone" type="tel"
+            placeholder="Контактный телефон" autocomplete="off" required>
+        </label>
 
-          <button class="popup-form__btn main-btn btn-reset" name="submit" type="submit">Отправить</button>
-          <p class="form-consult__notice">Ваши данные конфиденциальны</p>
-        </form>
-      </div>
+        <button class="popup-form__btn main-btn btn-reset" name="submit" type="submit">Отправить</button>
+        <p class="form-consult__notice">Ваши данные конфиденциальны</p>
+      </form>
     </div>
   </div>
 </div>
-
-
 <div class="popup popup-free popup-big" data-modal>
   <div class="popup-big__content">
     <button type="button" class="popup-free-close popup__close"><strong>&times;</strong></button>
     <h2 class="form-title popup-form__title">Получить бесплатную консультация</h2>
     <div class="popup-big__form">
       <form class="form-3 popup-form form-big" autocomplete="off" novalidate="novalidate">
+
         <div class="control-wrapper">
           <label class="input-label" for="popup-big__name">
             <input id="popup-big__name" class="popup-form__control popup-form__input name" autocomplete="off"
@@ -69,7 +66,7 @@
 
         <div class="control-wrapper">
           <label for="popup-big__phone">
-            <input id="popup-big__phone" class="popup-form__control popup-form__input phone" autocomplete="off"
+            <input id="popup-big__phone" class="popup-form__control popup-form__input phone-3" autocomplete="off"
               type="tel" placeholder="Ваш телефон" name="Телефон" />
           </label>
         </div>
@@ -141,6 +138,7 @@
 
         <textarea class="popup-form__control popup-form__input" name="Заявка" id="" cols="30" rows="10"
           placeholder="краткое содержание заявки"></textarea>
+
         <div class="control-wrapper">
           <button type="submit" class="popup-form__btn main-btn btn-reset">Отправить</button>
         </div>
@@ -155,6 +153,7 @@
     <h2 class="form-title popup-form__title">Получить помощь</h2>
     <div class="popup-big__form">
       <form class="form-4 popup-form form-big" autocomplete="off" novalidate="novalidate">
+
         <div class="control-wrapper">
           <label class="input-label" for="popup-big__name">
             <input id="popup-big__name" class="popup-form__control popup-form__input name" autocomplete="off"
@@ -164,7 +163,7 @@
 
         <div class="control-wrapper">
           <label for="popup-big__phone">
-            <input id="popup-big__phone" class="popup-form__control popup-form__input phone" autocomplete="off"
+            <input id="popup-big__phone" class="popup-form__control popup-form__input phone-3" autocomplete="off"
               type="tel" placeholder="Ваш телефон" name="Телефон" />
           </label>
         </div>
@@ -236,6 +235,7 @@
 
         <textarea class="popup-form__control popup-form__input" name="Заявка" id="" cols="30" rows="10"
           placeholder="краткое содержание заявки"></textarea>
+
         <div class="control-wrapper">
           <button type="submit" class="popup-form__btn main-btn btn-reset">Отправить</button>
         </div>

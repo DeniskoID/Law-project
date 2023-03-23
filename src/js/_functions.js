@@ -101,7 +101,11 @@ const afterForm = () => {
 
 const rules1 = [
   [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
-  [".phone", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [".phone-1", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+];
+const rules1_2 = [
+  [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [".phone-1", [{ rule: "required", errorMessage: "Обязательное поле" }]],
 ];
 const rules2 = [
   [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
@@ -116,11 +120,26 @@ const rules3 = [
       { rule: "email", errorMessage: "Некорректный email" },
     ],
   ],
-  [".phone", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [".phone-3", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+];
+const rules4 = [
+  [".name", [{ rule: "required", errorMessage: "Обязательное поле" }]],
+  [
+    ".email",
+    [
+      { rule: "required", errorMessage: "Обязательное поле" },
+      { rule: "email", errorMessage: "Некорректный email" },
+    ],
+  ],
+  [".phone-3", [{ rule: "required", errorMessage: "Обязательное поле" }]],
 ];
 
 validateForms(".form-1", rules1, afterForm);
+validateForms(".form-1-2", rules1_2, afterForm);
 validateForms(".form-2", rules2, afterForm);
 validateForms(".form-3", rules3, afterForm);
-validateForms(".form-4", rules3, afterForm);
-validateForms(".form-1-2", rules1, afterForm);
+validateForms(".form-4", rules4, afterForm);
+
+// const afterForm = () => {
+//   console.log("Произошла отправка, тут можно писать любые действия");
+// };

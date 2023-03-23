@@ -1,4 +1,4 @@
-const slider = document.querySelector(".submenu__items");
+const slider = document.querySelector(".submenu__nav");
 let isDown = false;
 let startX;
 let scrollLeft;

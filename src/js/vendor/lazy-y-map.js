@@ -24,7 +24,7 @@ function initYandexMap() {
   script.async = true;
 
   script.src =
-    "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5f15a6d762c404ba94d9d91392cd956bbb8798f5e10264eb3b8971442a6a1fa7&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true";
+    "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A64d6611c43389e0990df7171f57ab57cfb7441e0580975781693754d73114d06&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=true";
 
   document.getElementById("YandexMap").appendChild(script);
 }

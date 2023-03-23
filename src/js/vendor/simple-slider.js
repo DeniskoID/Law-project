@@ -486,7 +486,6 @@ class ItcSimpleSlider {
 // Инициализация слайдера
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("simple-slider");
   // активация слайдера
   new ItcSimpleSlider(".itcss", {
     loop: true,

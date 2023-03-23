@@ -8,6 +8,9 @@
   &__items {
     display: flex;
     position: relative;
+    width: rem(1200);
+    height: 100%;
+    margin: 0 auto;
   }
 
   &__item {
@@ -67,12 +70,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
     color: var(--dark-gray-color);
     line-height: 125%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    word-wrap: wrap;
   }
 }
 
@@ -96,13 +99,13 @@
   padding-right: 0;
 }
 
-.submenu__items {
+.submenu__nav {
   position: relative;
   height: 105px;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   transition: all 0.2s;
   transform: scale(1);
   will-change: transform;
@@ -114,7 +117,7 @@
   }
 }
 
-.submenu__items.active {
+.submenu__nav.active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
   transform: scale(1.03);
