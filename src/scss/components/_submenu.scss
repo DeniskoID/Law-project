@@ -24,7 +24,7 @@
     transition: all 0.4s ease;
 
     @include hover {
-      z-index: 6;
+      z-index: 8;
       height: 60px;
     }
   }
@@ -57,15 +57,6 @@
     left: 976px;
   }
 
-  &__item-active {
-    height: 70px;
-    background-color: #f57529;
-
-    & a {
-      color: var(--light-color);
-    }
-  }
-
   &__link {
     display: flex;
     justify-content: center;
@@ -93,6 +84,17 @@
   }
 }
 
+.item-active {
+  height: 70px;
+  background-color: #f57529;
+  z-index: 7;
+
+  & a {
+    width: 100%;
+    color: var(--light-color);
+  }
+}
+
 // Стили для горизонтального drag and scroll
 .submenu__container {
   padding-left: 0;
@@ -107,7 +109,6 @@
   overflow-y: hidden;
   white-space: wrap;
   transition: all 0.2s;
-  transform: scale(1);
   will-change: transform;
   user-select: none;
   cursor: pointer;
@@ -120,5 +121,6 @@
 .submenu__nav.active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
-  transform: scale(1.03);
 }
+
+// @submenu__item-active

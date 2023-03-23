@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-
-@include('partials/head.html')
+@include('partials/head.html',{
+"title":"Главная"
+})
 
 <body class="page__body">
   <div class="site-container">
     <!-- fix для прижатия футера к низу, при фиксированном меню -->
     <div class="fix" style="width: 100%; height: 1px; background-color: #f2f2f2;"></div>
-    @include('partials/header.html')
+    @include('partials/header.html',{"home-link": "javascript:void(0)"})
     <main class="main">
-      @include('partials/hero.html')
-      @include('partials/submenu.html')
-      @include('partials/about.html')
-      @include('partials/features.html')
-      @include('partials/steps.html')
-      @include('partials/revievs.html')
-      @include('partials/consult.html')
-      @include('partials/emergency-btn.html')
+      @include('partials/hero.html',
+      {
+      "hero-title":"Юридическая помощь по&nbsp;всем направлениям",
+      "hero-subtitle":"Столкнулись с нарушением законодательства. До решения вашей проблемы остался один клик",
+      "hero-image-w":"img/content_images/hero_image.webp",
+      "hero-image":"img/content_images/hero_image.jpg"
+      })
+      @include('partials/submenu.html',
+      {
+      "civil-link":"civil-cases.html",
+      "home-link":"javascript:void(0)",
+      "home-active":"item-active",
+      "civil-active":"",
+      "crim-active":"",
+      "corp-active":"",
+      "it-active":"",
+      "med-active":""
+      })
+
+      @include('partials/about.html',{})
+      @include('partials/features.html',{})
+      @include('partials/steps.html',{})
+      @include('partials/revievs.html',{})
+      @include('partials/consult.html',{})
     </main>
-    @include('partials/footer.html')
-    @include('partials/modals.html')
+    @include('partials/footer.html',{})
+    @include('partials/emergency-btn.html',{})
+    @include('partials/modals.html',{})
   </div>
 </body>
 

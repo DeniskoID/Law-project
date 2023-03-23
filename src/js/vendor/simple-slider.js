@@ -487,9 +487,13 @@ class ItcSimpleSlider {
 
 document.addEventListener("DOMContentLoaded", () => {
   // активация слайдера
-  new ItcSimpleSlider(".itcss", {
-    loop: true,
-    autoplay: true,
-    swipe: true,
-  });
+  const sliderExist = document.querySelector(".itcss");
+
+  if (sliderExist) {
+    new ItcSimpleSlider(".itcss", {
+      loop: true,
+      autoplay: true,
+      swipe: true,
+    });
+  }
 });

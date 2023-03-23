@@ -16,7 +16,7 @@ export const getHeaderHeight = () => {
     .querySelector(":root")
     .style.setProperty("--header-bottom-height", `${bottomHeader}px`);
 
-  const cubMenu = document?.querySelector(".submenu__item-active").offsetHeight;
+  const cubMenu = document?.querySelector(".submenu").offsetHeight;
   document
     .querySelector(":root")
     .style.setProperty("--submenu-height", `${cubMenu}px`);
