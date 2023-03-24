@@ -2,9 +2,10 @@
   &__container {
     padding-top: rem(40);
     padding-bottom: rem(60);
-  }
 
-  &__title {
+    @include small-tablet {
+      padding-top: rem(30);
+    }
   }
 
   &__content {

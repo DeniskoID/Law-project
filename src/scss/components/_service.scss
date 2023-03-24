@@ -1,0 +1,218 @@
+.service {
+  &__container {
+    padding-top: rem(40);
+    padding-bottom: rem(80);
+
+    @include small-tablet {
+      padding-top: rem(30);
+      padding-bottom: rem(60);
+    }
+  }
+
+  &__title {
+  }
+
+  &__content {
+  }
+}
+.cards {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: rem(50) rem(24);
+    grid-auto-flow: row;
+    justify-content: start;
+    align-items: strech;
+    grid-template-areas:
+      "text-container item-1 item-2"
+      "text-container item-3 item-4"
+      ". item-5 item-6"
+      ". item-7 item-8"
+      ". item-9 .";
+    width: 100%;
+
+    @include tablet {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: 0.5fr repeat(5, auto);
+      grid-template-areas:
+        "text-container text-container"
+        " item-1 item-2"
+        " item-3 item-4"
+        "item-5 item-6"
+        "item-7 item-8"
+        "item-9 .";
+    }
+    @include small-tablet {
+      row-gap: rem(40);
+      grid-template-columns: auto;
+      grid-template-rows: 0.5fr repeat(9, auto);
+      grid-template-areas:
+        "text-container"
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5"
+        "item-6"
+        "item-7"
+        "item-8"
+        "item-9";
+    }
+  }
+}
+
+.item-text {
+  grid-area: text-container;
+  // width: rem(384);
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  padding-left: rem(16);
+  padding-right: rem(16);
+}
+
+.item-1 {
+  grid-area: item-1;
+}
+.item-2 {
+  grid-area: item-2;
+}
+.item-3 {
+  grid-area: item-3;
+}
+.item-4 {
+  grid-area: item-4;
+}
+.item-5 {
+  grid-area: item-5;
+}
+.item-6 {
+  grid-area: item-6;
+}
+.item-7 {
+  grid-area: item-7;
+}
+.item-8 {
+  grid-area: item-8;
+}
+.item-9 {
+  grid-area: item-9;
+}
+
+.item-card {
+  position: relative;
+  border-radius: rem(5);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+
+  @include small-tablet {
+    aspect-ratio: 3 / 2;
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // ---------------
+    @include small-tablet {
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 1em;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    font-weight: 600;
+    font-size: rem(23);
+    line-height: 120%;
+    text-align: center;
+    color: var(--dark-blue);
+    background: rgba(233, 221, 205, 0.5);
+    padding-left: rem(35);
+    padding-right: rem(35);
+
+    @include mobile {
+      font-size: rem(16);
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    padding-left: rem(10);
+    padding-right: rem(10);
+
+    @include small-tablet {
+      justify-content: flex-end;
+    }
+    @include mobile {
+      justify-content: center;
+    }
+  }
+}
+
+.service-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(50);
+  background-color: var(--pink);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--dark-blue);
+  border-radius: rem(30);
+  transition: all 0.2s ease;
+
+  @include mobile {
+    height: rem(40);
+  }
+
+  @include hover {
+    background-color: var(--light-pink);
+  }
+
+  &--text {
+    flex-basis: rem(240);
+    margin-right: 5%;
+
+    @include mobile {
+      justify-content: center;
+      margin-right: rem(10);
+    }
+  }
+
+  &--icon {
+    flex-basis: rem(79);
+    background-image: url("../img/calendar_icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: content;
+
+    @include mobile {
+      background-size: 30%;
+    }
+  }
+}

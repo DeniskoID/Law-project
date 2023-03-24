@@ -8,6 +8,14 @@ html {
   box-sizing: inherit;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
