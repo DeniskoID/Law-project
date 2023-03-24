@@ -10,7 +10,9 @@ export const modals = () => {
     const close = document.querySelector(closeSelector);
     const windows = document.querySelectorAll("[data-modal]");
 
+    // Компенсация ширины скролл-бара
     const header = document.querySelector(".header");
+    const emBtn = document.querySelector(".emergency");
     const scroll = calcScroll();
 
     const inputs = document.querySelectorAll(`${modalSelector} input`);
@@ -38,6 +40,7 @@ export const modals = () => {
         // Фикс смещение окна при overflow hidden
         document.body.style.marginRight = `${scroll}px`;
         header.style.paddingRight = `${scroll}px`;
+        emBtn.style.marginRight = `${scroll}px`;
 
         // document.body.classList.add('modal-open');
       });
@@ -53,6 +56,7 @@ export const modals = () => {
       // Фикс смещение окна при overflow hidden
       document.body.style.marginRight = `0px`;
       header.style.paddingRight = `0px`;
+      emBtn.style.marginRight = `0px`;
       // document.body.classList.remove('modal-open');
     });
 
@@ -67,6 +71,7 @@ export const modals = () => {
         // Фикс смещение окна при overflow hidden
         document.body.style.marginRight = `0px`;
         header.style.paddingRight = `0px`;
+        emBtn.style.marginRight = `0px`;
         // document.body.classList.remove('modal-open');
 
         clearInputs();
@@ -100,7 +105,8 @@ export const modals = () => {
   // ==========================
 
   bindModal(".callback-btn", ".popup-consult", ".popup__close");
-  bindModal(".hero__btn-help", ".popup-help", ".popup-help-close");
-  bindModal(".hero__btn-question", ".popup-free", ".popup-free-close");
+  bindModal(".help-trigger", ".popup-help", ".popup-help-close");
+  bindModal(".consult-trigger", ".popup-free", ".popup-free-close");
   bindModal(".emergency", ".popup-emergency", ".popup-emergency .popup__close");
 };
+// 4444

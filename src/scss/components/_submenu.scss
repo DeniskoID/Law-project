@@ -15,6 +15,7 @@
 
   &__item {
     position: absolute;
+    top: -1px;
     width: 224px;
     height: 50px;
     text-align: center;
@@ -22,10 +23,14 @@
     box-shadow: 0px 4px 20px rgba(95, 96, 95, 0.5);
     border-radius: 0px 0px 60px 60px;
     transition: all 0.4s ease;
+    will-change: transform;
 
     @include hover {
-      z-index: 8;
-      height: 60px;
+      transform: scale(1.08);
+    }
+
+    &:active {
+      transform: scale(0.98);
     }
   }
 
@@ -85,7 +90,7 @@
 }
 
 .item-active {
-  height: 70px;
+  height: rem(60);
   background-color: #f57529;
   z-index: 7;
 

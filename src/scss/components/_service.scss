@@ -24,8 +24,6 @@
     grid-auto-rows: 1fr;
     gap: rem(50) rem(24);
     grid-auto-flow: row;
-    justify-content: start;
-    align-items: strech;
     grid-template-areas:
       "text-container item-1 item-2"
       "text-container item-3 item-4"
