@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 @include('partials/head.html',{
-"title":"Гражданские дела"
+"title":"Медицинское право"
 })
 
 <body class="page__body">
@@ -12,7 +12,7 @@
     <main class="main">
       @include('partials/hero.html',
       {
-      "hero-title":"Юридическая помощь для граждан",
+      "hero-title":"Юридическая помощь по медицинскому праву",
       "hero-subtitle":"Не ждите, пока станет слишко поздно! Получите юридическую помощь, уже сегодня",
       "hero-image-w":"img/content_images/hero_image-2.webp",
       "hero-image":"img/content_images/hero_image-2.jpg"
@@ -20,20 +20,20 @@
       @include('partials/submenu.html',
       {
       "home-link":"index.html",
-      "civil-link":"javascript:void(0)",
+      "civil-link":"civil-cases.html",
       "crime-link":"criminal-cases.html",
       "corp-link":"corp-cases.html",
       "it-link":"copyright-cases.html",
-      "med-link":"med-cases.html",
+      "med-link":"javascript:void(0)",
       "home-active":"",
-      "civil-active":"item-active",
+      "civil-active":"",
       "crime-active":"",
       "corp-active":"",
       "it-active":"",
-      "med-active":""
+      "med-active":"item-active"
       }
       )
-      @include('partials/civil-service.html',{})
+      @include('partials/med-service.html',{})
     </main>
     @include('partials/footer.html',{})
     @include('partials/emergency-btn.html',{})

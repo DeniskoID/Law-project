@@ -1,6 +1,7 @@
 .popup-consult,
 .popup-big,
-.popup-emergency {
+.popup-emergency,
+.popup-warn {
   display: none;
   position: fixed;
   justify-content: center;
@@ -58,4 +59,23 @@
 }
 .popup-big {
   padding-top: 2%;
+}
+
+.popup-warn {
+  &__title {
+    font-size: rem(25);
+    font-weight: 600;
+    color: var(--dark-gray-color);
+    line-height: 150%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
 }

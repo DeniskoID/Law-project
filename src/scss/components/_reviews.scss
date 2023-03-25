@@ -92,6 +92,7 @@
         width: 100%;
         object-position: center;
         margin-bottom: rem(21);
+        border-radius: 50%;
 
         @include mobile {
           margin-bottom: rem(10);

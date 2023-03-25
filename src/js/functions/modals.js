@@ -108,5 +108,6 @@ export const modals = () => {
   bindModal(".help-trigger", ".popup-help", ".popup-help-close");
   bindModal(".consult-trigger", ".popup-free", ".popup-free-close");
   bindModal(".emergency", ".popup-emergency", ".popup-emergency .popup__close");
+  bindModal(".warn-trigger", ".popup-warn", ".popup-warn .popup__close");
 };
 // 4444
