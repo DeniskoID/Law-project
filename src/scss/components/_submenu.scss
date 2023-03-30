@@ -118,6 +118,7 @@
   will-change: transform;
   user-select: none;
   cursor: pointer;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
