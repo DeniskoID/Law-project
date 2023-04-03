@@ -106,9 +106,10 @@ export const modals = () => {
 
   bindModal(".callback-btn", ".popup-consult", ".popup__close");
   bindModal(".help-trigger", ".popup-free", ".popup-help-close");
-  // bindModal(".help-trigger", ".popup-help", ".popup-help-close");
   bindModal(".consult-trigger", ".popup-free", ".popup-free-close");
-  bindModal(".emergency", ".popup-emergency", ".popup-emergency .popup__close");
+  bindModal(".emergency", ".popup-consult", ".popup-emergency .popup__close");
+  // bindModal(".help-trigger", ".popup-help", ".popup-help-close");
+  // bindModal(".emergency", ".popup-emergency", ".popup-emergency .popup__close");
   bindModal(".warn-trigger", ".popup-warn", ".popup-warn .popup__close");
 };
 // 4444

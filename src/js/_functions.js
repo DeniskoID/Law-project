@@ -76,10 +76,10 @@ const rules4 = [
 ];
 
 validateForms(".form-1", rules1, afterForm);
-validateForms(".form-1-2", rules1_2, afterForm);
+// validateForms(".form-1-2", rules1_2, afterForm);
 validateForms(".form-2", rules2, afterForm);
 validateForms(".form-3", rules3, afterForm);
-validateForms(".form-4", rules4, afterForm);
+// validateForms(".form-4", rules4, afterForm);
 
 // const afterForm = () => {
 //   console.log("Произошла отправка, тут можно писать любые действия");
