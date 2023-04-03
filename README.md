@@ -83,13 +83,14 @@
 
 ## Анимация
 
-Анимация на сайте реализована с помощью плагина `aos`.
+#### Анимация на сайте реализована с помощью плагина `aos`.
+
 К элемента добавляются атрибуты типа:
 
-`data-aos="fade-in"
-data-aos-delay="150"
-data-aos-duration="1000"
-data-aos-easing="ease-in-sine"`
+`data-aos="fade-in"`
+`data-aos-delay="150"`
+`data-aos-duration="1000"`
+`data-aos-easing="ease-in-sine"`
 
 # Gulp
 
